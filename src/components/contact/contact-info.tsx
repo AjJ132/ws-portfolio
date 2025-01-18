@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
+import { LINKEDIN_LINK } from '@/data/contact-info';
 import { Github, Linkedin, Twitter, MapPin, Mail, Phone, Clock } from 'lucide-react';
 
 export default async function ContactInfo() {
@@ -58,7 +59,7 @@ export default async function ContactInfo() {
               <span>Follow on GitHub</span>
             </a>
             <a 
-              href="https://linkedin.com/in/alan-johnson-a23819159" 
+              href={`${LINKEDIN_LINK}`}
               target='_blank'
               className="flex items-center space-x-2 text-sm p-2 rounded-md hover:bg-secondary transition-colors"
             >

@@ -13,6 +13,7 @@
 /lambdas/request-contact-api/lambda/node_modules/
 
 # dependencies
+
 /node_modules
 /.pnp
 .pnp.*

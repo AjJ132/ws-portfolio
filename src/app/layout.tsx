@@ -5,6 +5,7 @@ import "./globals.css";
 // import SplashScreen from "@/components/splashscreen/splashscreen";
 import Navbar from "@/components/navbar/navbar";
 import { ThemeProvider } from "@/providers/theme-provider";
+import Footer from "@/components/footer/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
             <div className="flex flex-col">
                 <Navbar />
                 {children}
+                <Footer />
             </div>
           </ThemeProvider>
       </body>
