@@ -52,6 +52,7 @@ export default function ContactForm() {
     return Object.keys(newErrors).length === 0;
   };
 
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -59,22 +60,39 @@ export default function ContactForm() {
     
     setIsSubmitting(true);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setShowSuccess(true);
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
+    try {
+        const response = await fetch('https://6dmma6ih4h.execute-api.us-east-1.amazonaws.com/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        });
+        
+        const data = await response.json();
+        
+        if (!response.ok) {
+            throw new Error(data.message);
+        }
+        
+        setShowSuccess(true);
+        setFormData({
+            name: '',
+            email: '',
+            subject: '',
+            message: ''
+        });
+    } catch (error) {
+        console.error('Error:', error);
+        // Handle error appropriately
+    } finally {
+        setIsSubmitting(false);
+    }
     
     setTimeout(() => {
-      setShowSuccess(false);
+        setShowSuccess(false);
     }, 5000);
-  };
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -96,6 +114,7 @@ export default function ContactForm() {
         <CardTitle>Send a Message</CardTitle>
       </CardHeader>
       <CardContent>
+        
         {showSuccess && (
           <Alert className="mb-6">
             <AlertDescription>

@@ -1,0 +1,33 @@
+{
+    "version": "2.0",
+    "routeKey": "POST /contact",
+    "rawPath": "/contact",
+    "rawQueryString": "",
+    "headers": {
+      "content-type": "application/json",
+      "origin": "https://aj-johnson.com",
+      "host": "api.aj-johnson.com",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
+      "accept": "*/*"
+    },
+    "requestContext": {
+      "accountId": "123456789012",
+      "apiId": "api-id",
+      "domainName": "api.aj-johnson.com",
+      "domainPrefix": "api",
+      "http": {
+        "method": "POST",
+        "path": "/contact",
+        "protocol": "HTTP/1.1",
+        "sourceIp": "123.123.123.123",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
+      },
+      "requestId": "test-request-id",
+      "routeKey": "POST /contact",
+      "stage": "$default",
+      "time": "10/Jan/2024:13:14:15 +0000",
+      "timeEpoch": 1705321193000
+    },
+    "body": "{\"name\":\"John Doe\",\"email\":\"johndoe@example.com\",\"subject\":\"Test Contact Form\",\"message\":\"This is a test message from the contact form.\"}",
+    "isBase64Encoded": false
+  }

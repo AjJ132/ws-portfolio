@@ -1,5 +1,17 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# ignore terraform files
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfplan
+*.tfout
+.terraform/
+
+
+#ignore lambda node files
+/lambdas/request-contact-api/lambda/node_modules/
+
 # dependencies
 /node_modules
 /.pnp
