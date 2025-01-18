@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="top-0 w-full border-b border-gray-800 bg-black/50 backdrop-blur-md">
+    <nav className="top-0 w-full border-b border-gray-800 bg-black/70 backdrop-blur-md z-[9999]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo and primary nav */}
