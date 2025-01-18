@@ -1,10 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 
 import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
-import Hero from '@/components/home/hero';
 import { Spotlight } from '@/components/ui/spotlight';
 import HomeAboutParallax from '@/components/home/about-parrllax';
 
@@ -27,10 +24,10 @@ const HomePage = () => {
         <div className="max-w-5xl mx-auto">
           <div className="space-y-12">
             <div className="space-y-4">
-              <h1 className="text-5xl sm:text-7xl font-bold tracking-tight">
-                Hi, I'm AJ Johnson
+                <h1 className="text-5xl sm:text-7xl font-bold tracking-tight">
+                Hi, I&apos;m AJ Johnson
                 <span className="text-primary">.</span>
-              </h1>
+                </h1>
               <h2 className="text-2xl sm:text-4xl text-muted-foreground font-medium max-w-3xl">
                 Full-Stack Software Engineer building innovative solutions with modern technologies.
               </h2>
@@ -55,11 +52,11 @@ const HomePage = () => {
         <section className="py-32 px-6 bg-muted/5 min-h-screen0">
           <div className="max-w-4xl mx-auto text-center space-y-12">
             <div className="space-y-4">
-              <h3 className="text-3xl font-semibold">Let's Connect</h3>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Whether you're interested in collaboration, have a question, or just want to say hello,
-                I'd love to hear from you.
-              </p>
+                <h3 className="text-3xl font-semibold">Let&apos;s Connect</h3>
+                <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Whether you&apos;re interested in collaboration, have a question, or just want to say hello,
+                I&apos;d love to hear from you.
+                </p>
             </div>
             <div className="flex flex-wrap justify-center gap-6">
               <Button variant="outline" size="lg" className="text-lg px-8">

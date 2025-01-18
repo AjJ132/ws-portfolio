@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Menu, X, Github } from 'lucide-react';
 import { ThemeToggle } from '../themes/theme-toggle';
+import Link from 'next/link';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,10 +14,10 @@ const Navbar: React.FC = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo and primary nav */}
           <div className="flex items-center">
-            <a href="/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               {/* You can replace this with your own logo */}
               <span className="text-xl font-semibold text-white">AJ</span>
-            </a>
+            </Link>
             {/* Desktop Navigation */}
             <div className="hidden md:ml-10 md:flex md:items-center md:space-x-6">
               <a href="/about" className="text-sm text-gray-400 hover:text-white transition-colors">

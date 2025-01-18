@@ -1,5 +1,5 @@
 import ContactForm from '@/components/contact/contact-form';
-import { ContactFormSkeleton, ContactInfoSkeleton } from '@/components/contact/contact-form-skeltons';
+import { ContactFormSkeleton } from '@/components/contact/contact-form-skeltons';
 import ContactInfo from '@/components/contact/contact-info';
 import { Suspense } from 'react';
 
