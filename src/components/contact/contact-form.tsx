@@ -118,7 +118,7 @@ export default function ContactForm() {
         {showSuccess && (
           <Alert className="mb-6">
             <AlertDescription>
-              Thanks for your message! I'll get back to you soon.
+              Thanks for your message! I&apos;ll get back to you soon.
             </AlertDescription>
           </Alert>
         )}

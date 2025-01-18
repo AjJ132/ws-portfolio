@@ -10,7 +10,7 @@ const ResumePage: React.FC = () => {
     <div className="min-h-screen bg-background p-8 max-w-5xl mx-auto space-y-8">
       {/* Header Section */}
       <div className="space-y-4">
-        <h1 className="text-4xl font-bold">Alan "AJ" Johnson</h1>
+        <h1 className="text-4xl font-bold">Alan &quot;AJ&quot; Johnson</h1>
         <div className="flex flex-wrap gap-4 text-muted-foreground">
           <div className="flex items-center gap-2">
             <Phone size={16} />
@@ -77,11 +77,11 @@ const ResumePage: React.FC = () => {
             </div>
             <ul className="list-disc pl-6 space-y-2">
               <li>Created a collaborative feedback machine learning model to recommend products to sports fans based on their similarity with other fans in the database.</li>
-              <li>Developed a Python-based vector embedding system to identify customers' nearest neighbors based on specific sports activities.</li>
+                <li>Developed a Python-based vector embedding system to identify customers&apos; nearest neighbors based on specific sports activities.</li>
               <li>Designed and implemented a Python-based data hygiene and feature engineering pipeline using Docker.</li>
               <li>Led the development of a Next.js React application to display predictive analytics and other crucial ticket sales information.</li>
               <li>Developed a Tableau-based dashboard to perform predictive analytics on incoming sports ticket transactions.</li>
-              <li>Conducted bi-weekly presentations to Kennesaw State's Athletic Director, providing progress updates and receiving feedback.</li>
+              <li>Conducted bi-weekly presentations to Kennesaw State&apos;s Athletic Director, providing progress updates and receiving feedback.</li>
             </ul>
           </div>
 
@@ -149,8 +149,8 @@ const ResumePage: React.FC = () => {
           <div className="space-y-2 mt-4">
             <h3 className="font-semibold">Activities & Leadership</h3>
             <ul className="list-disc pl-6 space-y-1">
-              <li>Division 1 Men's Track and Field Team (Aug 2021 – Current)</li>
-              <li>Provost's Athletics Oversight Council (Jan 2023 – Current)</li>
+                <li>Division 1 Men&apos;s Track and Field Team (Aug 2021 – Current)</li>
+                <li>Provost&apos;s Athletics Oversight Council (Jan 2023 – Current)</li>
               <li>Student Athlete Advisory Committee Member (Aug 2022 – Current)</li>
               <li>Student Athlete Advisory Committee President (Sep 2023 - Current)</li>
             </ul>

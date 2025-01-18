@@ -19,7 +19,7 @@ const Hero = () => {
           <div className="space-y-12">
             <div className="space-y-4">
               <h1 className="text-5xl sm:text-7xl font-bold tracking-tight">
-                Hi, I'm AJ Johnson
+                Hi, I&apos;m AJ Johnson
                 <span className="text-primary">.</span>
               </h1>
               <h2 className="text-2xl sm:text-4xl text-muted-foreground font-medium max-w-3xl">
