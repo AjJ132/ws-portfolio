@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Menu, X, Github } from 'lucide-react';
 import { ThemeToggle } from '../themes/theme-toggle';
+import Link from 'next/link';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,40 +14,40 @@ const Navbar: React.FC = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo and primary nav */}
           <div className="flex items-center">
-            <a href="/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               {/* You can replace this with your own logo */}
               <span className="text-xl font-semibold text-white">AJ</span>
-            </a>
+            </Link>
             {/* Desktop Navigation */}
             <div className="hidden md:ml-10 md:flex md:items-center md:space-x-6">
-              <a href="/about" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link href="/about" className="text-sm text-gray-400 hover:text-white transition-colors">
                 About
-              </a>
-              <a href="/projects" className="text-sm text-gray-400 hover:text-white transition-colors">
+                </Link>
+                <Link href="/projects" className="text-sm text-gray-400 hover:text-white transition-colors">
                 Projects
-              </a>
-              <a href="/resume" className="text-sm text-gray-400 hover:text-white transition-colors">
+                </Link>
+                <Link href="/resume" className="text-sm text-gray-400 hover:text-white transition-colors">
                 Resume
-              </a>
-              <a href="/contact" className="text-sm text-gray-400 hover:text-white transition-colors">
+                </Link>
+                <Link href="/contact" className="text-sm text-gray-400 hover:text-white transition-colors">
                 Contact
-              </a>
-              <a href="/this-website" className="text-sm text-gray-400 hover:text-white transition-colors">
+                </Link>
+                <Link href="/this-website" className="text-sm text-gray-400 hover:text-white transition-colors">
                 This Website
-              </a>
+                </Link>
             </div>
           </div>
 
           {/* Right side navigation items */}
           <div className="flex items-center space-x-4">
-            <a
+            <Link
               href="https://github.com/ajj132"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
             >
               <Github className="h-5 w-5" />
-            </a>
+            </Link>
             <ThemeToggle />
             
             {/* Mobile menu button */}
@@ -68,24 +69,24 @@ const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-black/50 backdrop-blur-md">
           <div className="space-y-1 px-4 pb-3 pt-2">
-            <a
+            <Link
               href="/about"
               className="block py-2 text-base text-gray-400 hover:text-white transition-colors"
             >
               About
-            </a>
-            <a
+            </Link>
+            <Link
               href="/projects"
               className="block py-2 text-base text-gray-400 hover:text-white transition-colors"
             >
               Projects
-            </a>
-            <a
+            </Link>
+            <Link
               href="/contact"
               className="block py-2 text-base text-gray-400 hover:text-white transition-colors"
             >
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       )}
