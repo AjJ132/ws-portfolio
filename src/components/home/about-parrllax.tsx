@@ -95,10 +95,10 @@ const content: ContentItem[] = [
 
 const HomeAboutParallax: React.FC = () => {
   return (
-    <section className="py-20 w-screen h-[80vh] bg-black">
-      <div className="max-w-[75vw] mx-auto">
+    <section className="py-20 w-screen h-screen bg-black">
+      {/* <div className="max-w-[75vw] mx-auto"> */}
         <StickyScroll content={content} />
-      </div>
+      {/* </div> */}
     </section>
   );
 };

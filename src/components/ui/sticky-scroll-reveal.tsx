@@ -1,44 +1,25 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
-interface MediaItem {
-  src: string;
-  alt: string;
-  type: 'image' | 'video';
-}
-
-interface ContentItem {
-  title: string;
-  description: string;
-  media: MediaItem[];
-}
-
-interface CarouselMediaProps {
-  media: MediaItem[];
-}
-
-interface StickyScrollProps {
-  content: ContentItem[];
-  contentClassName?: string;
-}
-
-export const StickyScroll: React.FC<StickyScrollProps> = ({
+export const StickyScroll = ({
   content,
   contentClassName,
+}: {
+  content: {
+    title: string;
+    description: string;
+    content?: React.ReactNode | any;
+  }[];
+  contentClassName?: string;
 }) => {
   const [activeCard, setActiveCard] = React.useState(0);
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
+    // uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
+    // target: ref
     container: ref,
     offset: ["start start", "end start"],
   });
@@ -59,12 +40,32 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
     setActiveCard(closestBreakpointIndex);
   });
 
+  const backgroundColors = [
+    "var(--slate-900)",
+    "var(--black)",
+    "var(--neutral-900)",
+  ];
+  const linearGradients = [
+    "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
+    "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
+    "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
+  ];
+
+  const [backgroundGradient, setBackgroundGradient] = useState(
+    linearGradients[0]
+  );
+
+  useEffect(() => {
+    setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
+  }, [activeCard]);
+
   return (
-    <div
-      className="h-screen overflow-y-auto flex justify-center relative space-x-10 rounded-md p-10 bg-black"
+    <motion.div
+      
+      className="h-full w-full overflow-y-auto flex justify-center relative space-x-10 rounded-md p-10 bg-black"
       ref={ref}
     >
-      <div className="div relative flex items-start px-4 mr-4 h-96">
+      <div className="div relative flex items-start px-4">
         <div className="max-w-2xl">
           {content.map((item, index) => (
             <div key={item.title + index} className="my-20">
@@ -86,56 +87,27 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-lg text-slate-300 max-w-sm mt-10"
+                className="text-kg text-slate-300 max-w-sm mt-10"
               >
                 {item.description}
               </motion.p>
             </div>
           ))}
           <div className="h-40" />
+          <div className="h-40" />
+          <div className="h-40" />
+          <div className="h-40" />
         </div>
       </div>
       <div
+        style={{ background: backgroundGradient }}
         className={cn(
-          "hidden lg:block h-96 w-[600px] rounded-md bg-black sticky top-10 overflow-visible ml-4",
+          "hidden lg:block h-60 w-80 rounded-md bg-white sticky top-10 overflow-hidden",
           contentClassName
         )}
       >
-        <CarouselMedia media={content[activeCard].media} />
+        {content[activeCard].content ?? null}
       </div>
-    </div>
-  );
-};
-
-const CarouselMedia: React.FC<CarouselMediaProps> = ({ media }) => {
-  return (
-    <Carousel className="w-full h-full">
-      <CarouselContent className="h-full">
-        {media.map((item, index) => (
-          <CarouselItem key={index} className="h-full">
-            <div className="h-96 w-full p-1">
-              {item.type === 'video' ? (
-                <video
-                  src={item.src}
-                  className="h-full w-full object-contain rounded-lg"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                />
-              ) : (
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="h-full w-full object-contain rounded-lg"
-                />
-              )}
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious className="left-2" />
-      <CarouselNext className="right-2" />
-    </Carousel>
+    </motion.div>
   );
 };
