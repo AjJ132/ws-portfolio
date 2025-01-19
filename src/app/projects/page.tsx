@@ -3,7 +3,7 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowUpRight, } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { projects } from '@/data/projects';
 import Image from 'next/image';
 
@@ -24,12 +24,15 @@ const ProjectsPage: React.FC = () => {
           {projects.map((project) => (
             <Card key={project.id} className="group relative overflow-hidden border bg-card transition-all hover:shadow-lg">
               {/* Project Preview */}
-              <div className="aspect-video w-full overflow-hidden bg-muted">
+              <div className="aspect-video w-full overflow-hidden bg-muted relative">
                 {project.images && project.images[0] && (
                   <Image
                     src={project.images[0]}
                     alt={project.title}
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    width={640}
+                    height={360}
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    priority={project.id <= 2} // Prioritize loading for first two projects
                   />
                 )}
               </div>
@@ -43,7 +46,6 @@ const ProjectsPage: React.FC = () => {
                       {project.description}
                     </p>
                   </div>
-                  
                 </div>
 
                 {/* Technologies */}
@@ -62,7 +64,6 @@ const ProjectsPage: React.FC = () => {
               </div>
 
               {/* Clickable Overlay */}
-              
               <a
                 href={'/projects/' + project.id}
                 className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 bg-background/5 transition-opacity"
