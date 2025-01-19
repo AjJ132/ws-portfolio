@@ -27,20 +27,10 @@ export const homePageContent: ContentItem[] = [
       "Division 1 Men's Track and Field athlete at Kennesaw State University since Fall 2021. Balancing the demands of collegiate athletics with academic excellence, completing my B.S. in Software Engineering (2024) and pursuing an M.S. in Software Engineering (2024-2026). Demonstrating leadership through athletics while maintaining technical excellence in software development.",
     media: [
       {
-        src: "/track-1.jpeg",
+        src: "/pv-4.jpg",
         alt: "Track and Field Headshot",
         type: "image"
       },
-      {
-        src: "/pv-2.jpg",
-        alt: "Mid-air pole vault",
-        type: "image"
-      },
-      {
-        src: "/pv.mp4",
-        alt: "Pole vault attempt",
-        type: "video"
-      }
     ]
   },
   {
@@ -71,20 +61,10 @@ export const homePageContent: ContentItem[] = [
       "Experienced in modern full-stack development using React, Next.js, TypeScript, and .NET. Created enterprise solutions at Haering Precision, including a comprehensive CMMS platform and LMS system. Proficient in both frontend technologies (React, HTML, CSS) and backend systems (C#, PostgreSQL, MongoDB), with expertise in CI/CD pipelines and cloud services.",
       media: [
         {
-          src: "/saac_1.jpg",
-          alt: "SAAC meeting",
+          src: "/roster-2.png",
+          alt: "Football Analytics Application",
           type: "image"
         },
-        {
-          src: "/cusa-saac.webp",
-          alt: "SAAC meeting",
-          type: "image"
-        },
-        {
-          src: "/api/placeholder/800/600",
-          alt: "SAAC meeting",
-          type: "image"
-        }
       ]
   },
   {
@@ -93,20 +73,10 @@ export const homePageContent: ContentItem[] = [
       "Developed innovative machine learning solutions at Kennesaw State Athletics, creating collaborative feedback models for sports fan engagement. Implemented Python-based vector embedding systems and data pipelines using Docker. Experience with predictive analytics, Tableau dashboards, and combining data science with practical software engineering applications.",
       media: [
         {
-          src: "/saac_1.jpg",
+          src: "/model_predictions.png",
           alt: "SAAC meeting",
           type: "image"
         },
-        {
-          src: "/cusa-saac.webp",
-          alt: "SAAC meeting",
-          type: "image"
-        },
-        {
-          src: "/api/placeholder/800/600",
-          alt: "SAAC meeting",
-          type: "image"
-        }
       ]
   }
 ];
