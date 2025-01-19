@@ -2,7 +2,6 @@
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-// import SplashScreen from "@/components/splashscreen/splashscreen";
 import Navbar from "@/components/navbar/navbar";
 import { ThemeProvider } from "@/providers/theme-provider";
 import Footer from "@/components/footer/footer";

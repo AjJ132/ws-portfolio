@@ -40,6 +40,8 @@ const FeaturedTeaser = () => {
                   <div className="ml-4 h-16 w-16 overflow-hidden rounded-md">
                     <Image
                       src={project.images[0]}
+                      width={640}
+                      height={360}
                       alt={project.title}
                       className="h-full w-full object-cover"
                     />
