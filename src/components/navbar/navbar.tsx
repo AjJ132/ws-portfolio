@@ -20,34 +20,34 @@ const Navbar: React.FC = () => {
             </Link>
             {/* Desktop Navigation */}
             <div className="hidden md:ml-10 md:flex md:items-center md:space-x-6">
-              <a href="/about" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link href="/about" className="text-sm text-gray-400 hover:text-white transition-colors">
                 About
-              </a>
-              <a href="/projects" className="text-sm text-gray-400 hover:text-white transition-colors">
+                </Link>
+                <Link href="/projects" className="text-sm text-gray-400 hover:text-white transition-colors">
                 Projects
-              </a>
-              <a href="/resume" className="text-sm text-gray-400 hover:text-white transition-colors">
+                </Link>
+                <Link href="/resume" className="text-sm text-gray-400 hover:text-white transition-colors">
                 Resume
-              </a>
-              <a href="/contact" className="text-sm text-gray-400 hover:text-white transition-colors">
+                </Link>
+                <Link href="/contact" className="text-sm text-gray-400 hover:text-white transition-colors">
                 Contact
-              </a>
-              <a href="/this-website" className="text-sm text-gray-400 hover:text-white transition-colors">
+                </Link>
+                <Link href="/this-website" className="text-sm text-gray-400 hover:text-white transition-colors">
                 This Website
-              </a>
+                </Link>
             </div>
           </div>
 
           {/* Right side navigation items */}
           <div className="flex items-center space-x-4">
-            <a
+            <Link
               href="https://github.com/ajj132"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
             >
               <Github className="h-5 w-5" />
-            </a>
+            </Link>
             <ThemeToggle />
             
             {/* Mobile menu button */}
@@ -69,24 +69,24 @@ const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-black/50 backdrop-blur-md">
           <div className="space-y-1 px-4 pb-3 pt-2">
-            <a
+            <Link
               href="/about"
               className="block py-2 text-base text-gray-400 hover:text-white transition-colors"
             >
               About
-            </a>
-            <a
+            </Link>
+            <Link
               href="/projects"
               className="block py-2 text-base text-gray-400 hover:text-white transition-colors"
             >
               Projects
-            </a>
-            <a
+            </Link>
+            <Link
               href="/contact"
               className="block py-2 text-base text-gray-400 hover:text-white transition-colors"
             >
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       )}

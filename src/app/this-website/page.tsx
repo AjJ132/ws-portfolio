@@ -1,8 +1,9 @@
 import React from "react";
 import { CodeBlock } from "@/components/ui/code-block";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { infrastructureCode, contactFormCode, projectsCode} from "@/data/code";
+import { infrastructureCode, contactFormCode, parallaxCode } from "@/data/code";
 import { Badge } from "@/components/ui/badge";
+
 
 const TechBadge = ({ children }: { children: React.ReactNode }) => (
   <Badge variant="secondary" className="text-sm">{children}</Badge>
@@ -10,7 +11,7 @@ const TechBadge = ({ children }: { children: React.ReactNode }) => (
 
 const ThisWebsitePage = () => {
   return (
-    <div className="max-w-4xl mx-auto space-y-12 py-8 px-4">
+    <div className="max-w-4xl mx-auto space-y-16 py-8 px-4">
       <div className="space-y-6">
         <h1 className="text-4xl font-bold">About This Website</h1>
         <div className="space-y-4">
@@ -22,9 +23,9 @@ const ThisWebsitePage = () => {
             <TechBadge>React</TechBadge>
             <TechBadge>TypeScript</TechBadge>
             <TechBadge>Tailwind CSS</TechBadge>
+            <TechBadge>Framer Motion</TechBadge>
             <TechBadge>AWS Lambda</TechBadge>
             <TechBadge>API Gateway</TechBadge>
-            <TechBadge>Terraform</TechBadge>
           </div>
         </div>
       </div>
@@ -33,8 +34,7 @@ const ThisWebsitePage = () => {
         <h2 className="text-2xl font-semibold">Technical Overview</h2>
         <p className="text-muted-foreground">
           The website combines server-side rendering with Next.js, modern React patterns, and a serverless backend 
-          architecture. All infrastructure is managed through code using Terraform, ensuring reproducibility and 
-          maintainability.
+          architecture. The site features smooth animations and parallax effects using Framer Motion.
         </p>
       </div>
 
@@ -43,8 +43,8 @@ const ThisWebsitePage = () => {
           <CardTitle>Infrastructure as Code</CardTitle>
           <CardDescription className="space-y-2">
             <p>
-              The backend infrastructure is fully automated using Terraform. This includes setting up AWS Lambda 
-              for serverless compute, API Gateway for RESTful endpoints, and SES for email handling.
+              Some of backend infrastructure is fully automated using Terraform. Currently the contact form API is deployed using
+              teraform. 
             </p>
             <p>
               Key features:
@@ -63,6 +63,36 @@ const ThisWebsitePage = () => {
             filename="main.tf"
             highlightLines={[2, 8, 15, 24]}
             code={infrastructureCode}
+          />
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Parallax Scroll Implementation</CardTitle>
+          <CardDescription className="space-y-2">
+            <p>
+              The website features a dynamic parallax scrolling section built with Framer Motion and React. 
+              This implementation showcases smooth animations and responsive design patterns.
+            </p>
+            <p>
+              Key features:
+            </p>
+            <ul className="list-disc list-inside space-y-1 text-sm">
+              <li>Scroll-based animations using Framer Motion's useScroll hook</li>
+              <li>Dynamic content rendering with smooth transitions</li>
+              <li>Responsive media display supporting both images and videos</li>
+              <li>Progress indicators and section markers</li>
+              <li>Custom MediaDisplay component for handling different media types</li>
+            </ul>
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <CodeBlock
+            language="tsx"
+            filename="ParallaxAbout.tsx"
+            highlightLines={[5, 22, 42, 89]}
+            code={parallaxCode}
           />
         </CardContent>
       </Card>
@@ -96,35 +126,6 @@ const ThisWebsitePage = () => {
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>Projects Showcase</CardTitle>
-          <CardDescription className="space-y-2">
-            <p>
-              The projects section uses a responsive grid layout with dynamic card components. Each project 
-              card features an image carousel, detailed descriptions, and links to live demos and source code.
-            </p>
-            <p>
-              Implementation highlights:
-            </p>
-            <ul className="list-disc list-inside space-y-1 text-sm">
-              <li>Responsive image carousels</li>
-              <li>Conditional rendering based on project type</li>
-              <li>Animated transitions</li>
-              <li>Flexible card layouts</li>
-            </ul>
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <CodeBlock
-            language="tsx"
-            filename="project-card.tsx"
-            highlightLines={[1, 7, 15, 28]}
-            code={projectsCode}
-          />
-        </CardContent>
-      </Card>
-
       <div className="space-y-4">
         <h2 className="text-2xl font-semibold">Development Practices</h2>
         <div className="grid md:grid-cols-3 gap-4">
@@ -135,9 +136,9 @@ const ThisWebsitePage = () => {
             </p>
           </Card>
           <Card className="p-4">
-            <h3 className="font-semibold mb-2">Component Design</h3>
+            <h3 className="font-semibold mb-2">Animation Design</h3>
             <p className="text-sm text-muted-foreground">
-              Components are built following atomic design principles, ensuring reusability and maintainability.
+              Animations are built using Framer Motion, providing smooth transitions and interactive elements.
             </p>
           </Card>
           <Card className="p-4">
