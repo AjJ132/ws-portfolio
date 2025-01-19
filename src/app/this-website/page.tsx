@@ -15,9 +15,9 @@ const ThisWebsitePage = () => {
       <div className="space-y-6">
         <h1 className="text-4xl font-bold">About This Website</h1>
         <div className="space-y-4">
-          <p className="text-xl text-muted-foreground">
-            This portfolio is built with modern web technologies and cloud infrastructure. Here's a technical deep dive into how it works.
-          </p>
+            <p className="text-xl text-muted-foreground">
+            This portfolio is built with modern web technologies and cloud infrastructure. Here&apos;s a technical deep dive into how it works.
+            </p>
           <div className="flex flex-wrap gap-2">
             <TechBadge>Next.js 14</TechBadge>
             <TechBadge>React</TechBadge>

@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { LINKEDIN_LINK } from '@/data/contact-info';
-import { Github, Linkedin, Twitter, MapPin, Mail, Phone, Clock } from 'lucide-react';
+import { Github, Linkedin, MapPin, Mail, Phone, Clock } from 'lucide-react';
 
 export default async function ContactInfo() {
   return (
