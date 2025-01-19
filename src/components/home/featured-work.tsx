@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { projects } from "@/data/projects";
+import Image from 'next/image';
 
 const FeaturedTeaser = () => {
   const featuredProjects = projects.filter(p => p.type === 'featured');
@@ -37,7 +38,7 @@ const FeaturedTeaser = () => {
                 </div>
                 {project.images && project.images[0] && (
                   <div className="ml-4 h-16 w-16 overflow-hidden rounded-md">
-                    <img
+                    <Image
                       src={project.images[0]}
                       alt={project.title}
                       className="h-full w-full object-cover"

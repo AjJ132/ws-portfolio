@@ -19,15 +19,16 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { projects } from '@/data/projects';
+import Image from 'next/image';
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}) {
+  const id = (await params).id;
 
-const ProjectPage: React.FC<PageProps> = ({ params }) => {
-  const project = projects.find((p) => p.id === Number(params.id));
+  const project = projects.find((p) => p.id === Number(id));
 
   if (!project) {
     notFound();
@@ -82,10 +83,12 @@ const ProjectPage: React.FC<PageProps> = ({ params }) => {
                   {project.images.map((image, index) => (
                     <CarouselItem key={index}>
                       <div className="aspect-video w-full overflow-hidden rounded-lg">
-                        <img
+                        <Image
                           src={image}
                           alt={`${project.title} - Image ${index + 1}`}
                           className="h-full w-full object-cover"
+                          width={1920}
+                          height={1080}
                         />
                       </div>
                     </CarouselItem>
@@ -138,4 +141,3 @@ const ProjectPage: React.FC<PageProps> = ({ params }) => {
   );
 }
 
-export default ProjectPage;
