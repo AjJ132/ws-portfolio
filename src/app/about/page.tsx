@@ -6,7 +6,7 @@ import React from 'react';
 import Image from "next/image";
 
 
-const dummyContent = [
+const aboutContent = [
   {
     title: "Early Beginnings in Technology and Athletics",
     description: (
@@ -27,6 +27,7 @@ const dummyContent = [
     badge: "Origins",
     image:
       "/tsa.jpeg",
+    alt: "TSA",
   },
   {
     title: "College Journey and Technical Growth",
@@ -54,7 +55,8 @@ const dummyContent = [
     ),
     badge: "Academic Journey",
     image:
-      "/pv-3.jpg",
+      "/pv-2.webp",
+    alt: "Pole Vaulting",
   },
   {
     title: "Professional Development and Innovation",
@@ -78,6 +80,7 @@ const dummyContent = [
     badge: "Professional Growth",
     image:
       "/aj-1.jpg",
+    alt: "Photo of AJ",
   },
 ];
 
@@ -86,7 +89,7 @@ const AboutPage: React.FC = () => {
   return (
     <TracingBeam>
         <div className="max-w-2xl mx-auto antialiased pt-4 relative mb-40 mt-20">
-            {dummyContent.map((item, index) => (
+            {aboutContent.map((item, index) => (
                 <div key={`content-${index}`} className="mb-10">
                     <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
                     {item.badge}
@@ -100,7 +103,7 @@ const AboutPage: React.FC = () => {
                     {item?.image && (
                         <Image
                             src={item.image}
-                            alt="blog thumbnail"
+                            alt={item.alt}
                             height="1000"
                             width="1000"
                             className="rounded-lg mb-10 object-cover"
