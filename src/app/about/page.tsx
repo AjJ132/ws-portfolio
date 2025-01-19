@@ -6,91 +6,86 @@ import { twMerge } from 'tailwind-merge';
 import Image from "next/image";
 
 
-
 const dummyContent = [
-    {
-      title: "Lorem Ipsum Dolor Sit Amet",
+  {
+    title: "Early Beginnings in Technology and Athletics",
+    description: (
+      <>
+        <p>
+          My technical journey began in high school when I joined the Technology Student Association (TSA). 
+          I developed video games using Unity and C#, creating 3D models for our team projects. Our dedication 
+          led to remarkable success, securing three state championships and a national title in video game design.
+        </p>
+        <p>
+          Parallel to my technical pursuits, I took up pole vaulting with intense dedication. From December 
+          of my sophomore year through May of my senior year, I committed to a rigorous schedule, driving 
+          three days a week from Hartwell, GA to Atlanta, GA—a two-hour journey each way—to train. This 
+          dedication to both technology and athletics would shape my future path.
+        </p>
+      </>
+    ),
+    badge: "Origins",
+    image:
+      "/tsa.jpeg",
+  },
+  {
+    title: "College Journey and Technical Growth",
+    description: (
+      <>
+        <p>
+          After signing with Kennesaw State University in fall 2021, I immersed myself in software development. 
+          My first breakthrough came with a summer internship at Haering Precision in Lavonia, GA, where I 
+          expanded my C# knowledge beyond console applications and delved into full-stack development. Working 
+          on a CMS system for on-site machines, I gained practical experience with SQL and deadline-driven 
+          projects.
+        </p>
+        <p>
+          My technical skills grew as I created an innovative project tracking the Kennesaw State University 
+          bus system using location APIs and statistical analysis to predict movements and analyze delays. 
+          Meanwhile, I excelled in athletics, securing two conference championships and making two first-round 
+          appearances in track and field.
+        </p>
+        <p>
+          Through intense dedication, I completed my degree in just three years, tackling four 18-hour semesters 
+          and one 21-hour semester. My achievements were recognized with the Outstanding Student Award from the 
+          software engineering college in my final semester.
+        </p>
+      </>
+    ),
+    badge: "Academic Journey",
+    image:
+      "/pv-3.jpg",
+  },
+  {
+    title: "Professional Development and Innovation",
       description: (
         <>
           <p>
-            Sit duis est minim proident non nisi velit non consectetur. Esse
-            adipisicing laboris consectetur enim ipsum reprehenderit eu deserunt
-            Lorem ut aliqua anim do. Duis cupidatat qui irure cupidatat incididunt
-            incididunt enim magna id est qui sunt fugiat. Laboris do duis pariatur
-            fugiat Lorem aute sit ullamco. Qui deserunt non reprehenderit dolore
-            nisi velit exercitation Lorem qui do enim culpa. Aliqua eiusmod in
-            occaecat reprehenderit laborum nostrud fugiat voluptate do Lorem culpa
-            officia sint labore. Tempor consectetur excepteur ut fugiat veniam
-            commodo et labore dolore commodo pariatur.
+            Post-graduation, I joined the athletic department, where I developed a machine learning system 
+            analyzing ticket sales data to predict potential season ticket buyers for the football program. 
+            This project evolved into my current work on a comprehensive system that scrapes football 
+            information and employs machine learning for predictive analytics on player performance and team fit.
           </p>
           <p>
-            Dolor minim irure ut Lorem proident. Ipsum do pariatur est ad ad
-            veniam in commodo id reprehenderit adipisicing. Proident duis
-            exercitation ad quis ex cupidatat cupidatat occaecat adipisicing.
-          </p>
-          <p>
-            Tempor quis dolor veniam quis dolor. Sit reprehenderit eiusmod
-            reprehenderit deserunt amet laborum consequat adipisicing officia qui
-            irure id sint adipisicing. Adipisicing fugiat aliqua nulla nostrud.
-            Amet culpa officia aliquip deserunt veniam deserunt officia
-            adipisicing aliquip proident officia sunt.
+            My journey has been marked by continuous learning and innovation, from mastering containerization 
+            and Kubernetes to developing Stride Sync, a web scraping application for track and field information. 
+            As SAAC president and a member of the Provost's Athletic Oversight Committee, I've combined my 
+            technical expertise with leadership skills to make meaningful contributions to both athletics and 
+            technology.
           </p>
         </>
       ),
-      badge: "React",
-      image:
-        "/bg-1.avif",
-    },
-    {
-      title: "Lorem Ipsum Dolor Sit Amet",
-      description: (
-        <>
-          <p>
-            Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-            deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-            non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-            sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
-            velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
-            commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
-          </p>
-          <p>
-            In dolore veniam excepteur eu est et sunt velit. Ipsum sint esse
-            veniam fugiat esse qui sint ad sunt reprehenderit do qui proident
-            reprehenderit. Laborum exercitation aliqua reprehenderit ea sint
-            cillum ut mollit.
-          </p>
-        </>
-      ),
-      badge: "Changelog",
-      image:
-        "/bg-2.avif",
-    },
-    {
-      title: "Lorem Ipsum Dolor Sit Amet",
-      description: (
-        <>
-          <p>
-            Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-            deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-            non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-            sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
-            velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
-            commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
-          </p>
-        </>
-      ),
-      badge: "Launch Week",
-      image:
-        "/bg-3.avif",
-    },
+    badge: "Professional Growth",
+    image:
+      "/aj-1.jpg",
+  },
 ];
-  
 
 
 const AboutPage: React.FC = () => {
   return (
     <TracingBeam>
-        <div className="max-w-2xl mx-auto antialiased pt-4 relative">
+        <div className="max-w-2xl mx-auto antialiased pt-4 relative mb-40 mt-20">
             {dummyContent.map((item, index) => (
                 <div key={`content-${index}`} className="mb-10">
                     <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
