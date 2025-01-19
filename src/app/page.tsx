@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '@/components/home/hero';
 import HomeAboutParallax from '@/components/home/about-parrllax';
+import FeaturedTeaser from '@/components/home/featured-work';
 
 
 const HomePage = () => {
@@ -10,6 +11,8 @@ const HomePage = () => {
         <Hero />
 
         <HomeAboutParallax />
+
+        <FeaturedTeaser />
 
       </div>
 

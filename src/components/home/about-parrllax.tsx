@@ -70,7 +70,7 @@ const ParallaxAbout: React.FC = () => {
       className="w-full bg-black relative"
       style={{ height: `${cardLength * 100}vh` }} // Total height based on number of cards
     >
-      <div className="sticky top-0 h-screen flex items-center justify-between mx-auto w-[80vw] px-4">
+      <div className="sticky top-0 h-screen flex items-center justify-between mx-auto w-[80vw] px-4 max-w-[1200px]">
         <div className="flex-1 max-w-2xl">
           <div className="w-full">
             {homePageContent.map((item, index) => (

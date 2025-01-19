@@ -79,7 +79,7 @@ const ThisWebsitePage = () => {
               Key features:
             </p>
             <ul className="list-disc list-inside space-y-1 text-sm">
-              <li>Scroll-based animations using Framer Motion's useScroll hook</li>
+                <li>Scroll-based animations using Framer Motion&apos;s useScroll hook</li>
               <li>Dynamic content rendering with smooth transitions</li>
               <li>Responsive media display supporting both images and videos</li>
               <li>Progress indicators and section markers</li>
