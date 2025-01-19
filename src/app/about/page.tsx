@@ -69,7 +69,7 @@ const dummyContent = [
           <p>
             My journey has been marked by continuous learning and innovation, from mastering containerization 
             and Kubernetes to developing Stride Sync, a web scraping application for track and field information. 
-            As SAAC president and a member of the Provost's Athletic Oversight Committee, I've combined my 
+            As SAAC president and a member of the Provost&apos;s Athletic Oversight Committee, I&apos;ve combined my 
             technical expertise with leadership skills to make meaningful contributions to both athletics and 
             technology.
           </p>

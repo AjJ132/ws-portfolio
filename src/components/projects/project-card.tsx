@@ -12,6 +12,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Project } from '@/types/projects';
+import Image from 'next/image';
 
 interface ProjectCardProps {
     project: Project;
@@ -50,7 +51,7 @@ interface ProjectCardProps {
                   {project.images.map((image, index) => (
                     <CarouselItem key={index}>
                       <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
-                        <img
+                        <Image
                           src={image}
                           alt={`${project.title} - Image ${index + 1}`}
                           className="object-cover object-center hover:scale-105 transition-transform duration-300"
