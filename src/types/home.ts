@@ -27,7 +27,7 @@ export const homePageContent: ContentItem[] = [
       "Division 1 Men's Track and Field athlete at Kennesaw State University since Fall 2021. Balancing the demands of collegiate athletics with academic excellence, completing my B.S. in Software Engineering (2024) and pursuing an M.S. in Software Engineering (2024-2026). Demonstrating leadership through athletics while maintaining technical excellence in software development.",
     media: [
       {
-        src: "/pv-4.jpg",
+        src: "/pv-4.webp",
         alt: "Track and Field Headshot",
         type: "image"
       },
@@ -39,20 +39,10 @@ export const homePageContent: ContentItem[] = [
       "Serving as the Student-Athlete Advisory Committee President (2023-2025), representing athlete interests across both ASUN and CUSA conferences. Member of the Provost's Athletics Oversight Council and recipient of the 2024 Spring Outstanding Student Award. Leading initiatives to enhance student-athlete experience while developing enterprise software solutions.",
     media: [
       {
-        src: "/saac_1.jpg",
+        src: "/saac_1.webp",
         alt: "SAAC meeting",
         type: "image"
       },
-      {
-        src: "/cusa-saac.webp",
-        alt: "SAAC meeting",
-        type: "image"
-      },
-      {
-        src: "/api/placeholder/800/600",
-        alt: "SAAC meeting",
-        type: "image"
-      }
     ]
   },
   {
