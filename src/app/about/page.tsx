@@ -26,7 +26,7 @@ const aboutContent = [
     ),
     badge: "Origins",
     image:
-      "/tsa.jpeg",
+      "/senior_day.jpg",
     alt: "TSA",
   },
   {
@@ -55,7 +55,7 @@ const aboutContent = [
     ),
     badge: "Academic Journey",
     image:
-      "/pv-2.webp",
+      "/pv.jpg",
     alt: "Pole Vaulting",
   },
   {

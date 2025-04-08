@@ -22,6 +22,7 @@ export const projects: Project[] = [
       },
       images: [
         '/hughes-residential.png',
+        '/hughes-residential-2.png',
       ],
       demoUrl: 'hughes-residential.com',
       
@@ -36,7 +37,11 @@ export const projects: Project[] = [
         'Next.js',
         'TypeScript',
         'Terraform',
-        'AWS Lambda',
+        'AWS',
+        'ECS',
+        'Lambda',
+        'SQS',
+        'SES',
         'Beautiful Soup',
         'Docker',
         'Machine Learning',
@@ -50,7 +55,8 @@ export const projects: Project[] = [
       },
       images: [
         '/players.png',
-        '/roster.png'
+        '/prospects-1.png',
+        '/field-analysis.png',
       ],
       
       

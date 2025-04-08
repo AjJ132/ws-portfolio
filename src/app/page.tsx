@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from '@/components/home/hero';
-import HomeAboutParallax from '@/components/home/about-parrllax';
 import FeaturedTeaser from '@/components/home/featured-work';
+import ScrollingAbout from '@/components/home/about-content';
 
 
 const HomePage = () => {
@@ -10,8 +10,8 @@ const HomePage = () => {
       <div className="min-h-screen">
         <Hero />
 
-        <HomeAboutParallax />
-
+        <ScrollingAbout />
+        
         <FeaturedTeaser />
 
       </div>

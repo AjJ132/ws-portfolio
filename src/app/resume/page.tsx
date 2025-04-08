@@ -28,6 +28,18 @@ const ResumePage: React.FC = () => {
         <h2 className="text-2xl font-semibold text-primary">Full-Stack Software Engineer</h2>
       </div>
 
+      {/* Summary */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Summary</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-muted-foreground">
+            Full Stack Software Engineer with 3+ years of experience developing scalable web applications with proficiency in both frontend and backend technologies. Demonstrated ability to build high-performance user interfaces and robust server-side solutions while collaborating effectively in agile environments. Combines technical versatility with a distinguished 4-year student athlete background. Passionate about creating exceptional digital experiences with a growth mindset for continuous learning.
+          </p>
+        </CardContent>
+      </Card>
+
       {/* Technical Skills */}
       <Card>
         <CardHeader>
@@ -35,21 +47,35 @@ const ResumePage: React.FC = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">
-            <h3 className="font-semibold">Languages</h3>
+            <h3 className="font-semibold">Skills</h3>
             <div className="flex flex-wrap gap-2">
-              {['C#', 'HTML', 'CSS', 'Java', 'SQL', 'GO', 'Swift', 'JavaScript', 'Python', 'TypeScript'].map((skill) => (
+                {[
+                'React', 
+                'Typescript', 
+                'Javascript', 
+                'HTML', 
+                'CSS', 
+                'Next.js', 
+                'Node.js', 
+                'REST', 
+                'Python', 
+                'Docker', 
+                'PostgreSQL', 
+                'AWS'
+                ].map((skill) => (
                 <Badge key={skill} variant="secondary">{skill}</Badge>
-              ))}
+                ))}
             </div>
           </div>
           <div className="space-y-2">
-            <h3 className="font-semibold">Technology</h3>
-            <div className="flex flex-wrap gap-2">
-              {['Kubernetes', 'Docker', '.NET', 'Git', 'Azure', 'SwiftUI', 'PostgreSQL', 'MongoDB', 'NGINX', 'React', 'Next.js'].map((tech) => (
-                <Badge key={tech} variant="secondary">{tech}</Badge>
-              ))}
-            </div>
+            <h3 className="font-semibold">Core Competencies</h3>
+          <div className="flex flex-wrap gap-2">
+            {['Software Development', 'Version Control', 'Database Management', 'Code Testing & Quality Assurance', 'Web Development',
+              'Software Testing', 'Cloud Native', 'Agile Methodologies', 'Collaboration', 'Problem Solving', 'Communication'].map((tech) => (
+              <Badge key={tech} variant="secondary">{tech}</Badge>
+            ))}
           </div>
+            </div>
           <div className="space-y-2">
             <h3 className="font-semibold">Concepts</h3>
             <div className="flex flex-wrap gap-2">
